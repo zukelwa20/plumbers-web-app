@@ -1,0 +1,30 @@
+{
+  "name": "plumbers-web-app",
+  "version": "1.0.0",
+  "description": "plambers app",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zukelwa20/plumbers-web-app.git"
+  },
+  "author": "makho",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zukelwa20/plumbers-web-app/issues"
+  },
+  "homepage": "https://github.com/zukelwa20/plumbers-web-app#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "express-flash": "0.0.2",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.15.6",
+    "handlebars": "^4.0.11",
+    "mongodb": "^2.2.33",
+    "mongoose": "^4.13.5",
+    "nodemon": "^1.12.1"
+  }
+}

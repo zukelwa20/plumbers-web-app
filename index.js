@@ -11,7 +11,7 @@ const models = model(process.env.MONGO_DB_URL ||"mongodb://localhost:27017/plumb
 
 
 const plumbersRoutes = require('./plumbers');
-const plumberRoute = plumberRoutes(models);
+const plumberRoute = plumbersRoutes(model);
 
 var app = express();
 
