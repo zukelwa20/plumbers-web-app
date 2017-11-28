@@ -42,10 +42,21 @@ app.engine('hbs', exphbs({
 
 app.set('view engine', 'hbs');
 
-app.get("/",function(req, res){
-  res.redirect('/api/plumbers')
- })
+// app.get("/",function(req, res){
+//   res.redirect('/api/plumbers')
+//  })
 
-app.post("/api/plumbers", )
-app.post("/api/plumbers/slot/:slot/day/:day", )
-app.get("/api/plumbers/:id/bookings", )
+app.get("/api/plumbers", plumberRoute.findPlumbers)
+app.post("/api/plumbers", plumberRoute.plumbersFun )
+// app.post("/api/plumbers/slot/:slot/day/:day", )
+// app.get("/api/plumbers/:id/bookings", )
+
+//starting the sarver
+var server = app.listen(process.env.PORT || 3001, function(){
+
+    var host = server.address().address;
+    var port = server.address().port;
+
+    console.log('Example app listening at http://%s:%s', host, port);
+
+});
