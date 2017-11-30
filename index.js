@@ -42,13 +42,13 @@ app.engine('hbs', exphbs({
 
 app.set('view engine', 'hbs');
 
-app.get("/",function(req, res){
-  res.redirect('/api/plumbers')
- })
+// app.get("/",function(req, res){
+//   res.redirect('/api/plumbers')
+//  })
 
 app.get("/api/plumbers", plumberRoute.findPlumbers)
-app.post("/api/plumbers", plumberRoute.plumbersFun )
-// app.post("/api/plumbers/slot/:slot/day/:day", )
+app.post("/api/plumbers", plumberRoute.plumbersFun)
+app.post("/api/plumbers/slot/:slot/day/:day", plumberRoute.slotsAndDays)
 // app.get("/api/plumbers/:id/bookings", )
 
 //starting the sarver
