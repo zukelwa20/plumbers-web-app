@@ -7,11 +7,11 @@ const flash = require('express-flash');
 
 
 const model = require("./models");
-const models = model(process.env.MONGO_DB_URL ||"mongodb://localhost:27017/plumbersData");
+const models = model(process.env.MONGO_DB_URL ||"mongodb://localhost:/plumbersData");
 
 
 const plumbersRoutes = require('./plumbers');
-const plumberRoute = plumbersRoutes(model);
+const plumberRoute = plumbersRoutes(models);
 
 var app = express();
 
@@ -42,9 +42,9 @@ app.engine('hbs', exphbs({
 
 app.set('view engine', 'hbs');
 
-// app.get("/",function(req, res){
-//   res.redirect('/api/plumbers')
-//  })
+app.get("/",function(req, res){
+  res.redirect('/api/plumbers')
+ })
 
 app.get("/api/plumbers", plumberRoute.findPlumbers)
 app.post("/api/plumbers", plumberRoute.plumbersFun )

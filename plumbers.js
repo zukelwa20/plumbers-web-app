@@ -4,7 +4,7 @@ var plumbersFun = function(req, res, next){
 
 var name = req.body.name
 var slots = req.body.days
-
+console.log(name);
   models.plumbersShifts.create({
                   name:name
                 },

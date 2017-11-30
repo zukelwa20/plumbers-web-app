@@ -11,8 +11,9 @@ module.exports = function(mongoUrl) {
 
 
     var plumbersShifts = mongoose.model('plumbersShifts', {
-        name: String
-        // days: Object
+        name: String,
+         days: Object,
+         slots: Object
   });
 
 
