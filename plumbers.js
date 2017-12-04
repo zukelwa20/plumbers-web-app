@@ -1,4 +1,4 @@
-module.exports = function(models) {
+  module.exports = function(models) {
 
     var plumbersFun = function(req, res, next) {
 
@@ -35,17 +35,15 @@ module.exports = function(models) {
     }
 
     var slotsAndDays = function(req, res, next) {
-        var name = req.params.name
+      //      var name = req.params.name
         var slotsTowork = req.params.slot
         var daysTowork = req.params.day
 
-        models.plumbersShifts.find({
-                name: name
-            }, {
+        models.plumbersShifts.findOneAndUpdate({
                 slot: slotsTowork
             }, {
                 day: daysTowork
-            }, 
+            },
             function(err, results) {
                 if (err) {
                     console.log(err);

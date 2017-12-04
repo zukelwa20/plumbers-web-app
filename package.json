@@ -22,7 +22,6 @@
     "express-flash": "0.0.2",
     "express-handlebars": "^3.0.0",
     "express-session": "^1.15.6",
-    "handlebars": "^4.0.11",
     "mongodb": "^2.2.33",
     "mongoose": "^4.13.5",
     "nodemon": "^1.12.1"

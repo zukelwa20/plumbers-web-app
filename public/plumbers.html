@@ -2,11 +2,15 @@
 <html>
   <head>
     <meta charset="utf-8">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js"></script> 
+
     <title>Plumbers days and slots to work</title>
   </head>
   <body>
     <h1>Plumbers details, days and slots to work</h1>
 
+
+    <script id="myTemplate" type="text/handlebars-x">
     <table>
                   <thead>
                       <th>Name</th>
@@ -17,7 +21,7 @@
                   </thead>
 
                   <tbody>
-                  {{#each}}
+                  {{#each plumbers}}
                       <tr>
                           <td>{{name}}</td>
                           <td>{{email}}</td>
@@ -25,5 +29,10 @@
                           <td>{{slot}}</td>
                       </tr>
                   {{/each}}
+    </table>
+    </script>
+    <div class = "displayTable"></div>
 </body>
+
+<script src="frontend.js" charset="utf-8"></script>
 </html>
